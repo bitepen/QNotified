@@ -41,9 +41,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.res.ResourcesCompat;
+import com.topjohnwu.magisk.core.base.BaseActivity;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
@@ -62,7 +62,7 @@ import nil.nadph.qnotified.util.Natives;
 import nil.nadph.qnotified.util.UiThread;
 import nil.nadph.qnotified.util.Utils;
 
-public class ConfigV2Activity extends AppCompatActivity {
+public class ConfigV2Activity extends BaseActivity {
 
     private static final String ALIAS_ACTIVITY_NAME = "nil.nadph.qnotified.activity.ConfigV2ActivityAlias";
     private final Looper mainLooper = Looper.getMainLooper();
@@ -72,6 +72,7 @@ public class ConfigV2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Theme_MaiTungTMDesign);
         if (R.string.res_inject_success >>> 24 == 0x7f) {
             throw new RuntimeException("package id must NOT be 0x7f");
         }

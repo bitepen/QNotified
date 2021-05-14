@@ -57,15 +57,12 @@ public class InjectAPK {
             ClassLoader cl = new InjectedClassLoader(apk);
             PackageManager pm = context.getPackageManager();
             ApplicationInfo info = pm.getPackageArchiveInfo(apk.getPath(), 0).applicationInfo;
-            Log.d("QNdump", "exist:" + apk.exists() + ",cl:" + cl + ",info=" + info + "clsName=" + info.className);
             try {
                 // Create the receiver Application
-                Log.d("QNdump", "clsName=" + info.className + ",class=" + cl.loadClass(info.className));
                 Object app = cl.loadClass(info.className)
                         .getConstructor(Object.class)
                         .newInstance(DynAPK.pack(dynData()));
 
-                Log.d("QNdump", "app" + app);
                 // Create the receiver component factory
                 Object factory = null;
                 if (Build.VERSION.SDK_INT >= 28) {

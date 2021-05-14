@@ -18,8 +18,8 @@ public class Mapping {
     static {
         map.put("a.Q", "");
         map.put("f.u7", "nil.nadph.qnotified.activity.ConfigV2Activity");
-        //map.put("fxQ.lk", "com.topjohnwu.magisk.core.Provider");
-        //map.put("yy.E", "com.topjohnwu.magisk.core.Receiver");
+        map.put("fxQ.lk", "com.topjohnwu.magisk.core.Provider");
+        map.put("yy.E", "com.topjohnwu.magisk.core.Receiver");
         map.put("xt.R", "nil.nadph.qnotified.activity.ConfigV2ActivityAlias");
         map.put("lt5.a", "me.singleneuron.activity.QQPurifyAgentActivity");
         map.put("d.s", "nil.nadph.qnotified.activity.ConfigActivity");

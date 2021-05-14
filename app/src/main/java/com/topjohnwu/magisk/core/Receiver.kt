@@ -1,0 +1,25 @@
+package com.topjohnwu.magisk.core
+
+import android.annotation.SuppressLint
+import android.content.ContextWrapper
+import android.content.Intent
+import com.topjohnwu.magisk.core.base.BaseReceiver
+open class Receiver : BaseReceiver() {
+
+
+    @SuppressLint("InlinedApi")
+    private fun getPkg(intent: Intent): String? {
+        val pkg = intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME)
+        return pkg ?: intent.data?.schemeSpecificPart
+    }
+
+    private fun getUid(intent: Intent): Int? {
+        val uid = intent.getIntExtra(Intent.EXTRA_UID, -1)
+        return if (uid == -1) null else uid
+    }
+
+    override fun onReceive(context: ContextWrapper, intent: Intent?) {
+        intent ?: return
+
+    }
+}
