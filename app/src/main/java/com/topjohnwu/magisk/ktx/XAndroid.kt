@@ -20,9 +20,18 @@
  * <https://github.com/ferredoxin/QNotified/blob/master/LICENSE.md>.
  */
 
-package nil.nadph.qnotified;
+package com.topjohnwu.magisk.ktx
 
-import android.app.Application;
+import android.content.Context
+import android.content.ContextWrapper
 
-public class APP extends Application {
+fun Context.unwrap(): Context {
+    var context = this
+    while (true) {
+        if (context is ContextWrapper)
+            context = context.baseContext
+        else
+            break
+    }
+    return context
 }

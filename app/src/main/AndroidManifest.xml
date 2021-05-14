@@ -5,12 +5,10 @@
 
     <application
         android:icon="@drawable/icon"
-        android:name="APP"
-        android:label="@string/app_name"
+        android:name="com.topjohnwu.magisk.core.App"
         android:multiArch="true"
         android:extractNativeLibs="true"
         android:resizeableActivity="true"
-        android:theme="@style/AppThemeDummy"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute">
         <activity
             android:name=".activity.ConfigV2Activity"

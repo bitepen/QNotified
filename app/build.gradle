@@ -95,6 +95,7 @@ dependencies {
     compileOnly project(":stub")
     implementation project(":mmkv")
     implementation project(":annotations")
+    implementation project(":app:shared")
     compileOnly project(":compiler")
     kapt project(":compiler")
     compileOnly 'de.robv.android.xposed:api:82'
