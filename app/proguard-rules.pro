@@ -19,6 +19,8 @@
 -keep public class * extends android.app.backup.BackupAgentHelper
 -keep public class * extends android.preference.Preference
 
+-keep class com.topjohnwu.magisk.core.App { <init>(java.lang.Object); }
+
 -keepclasseswithmembernames class * {
     native <methods>;
 }
