@@ -4,4 +4,6 @@
     <string name="no_internet_msg">下载需要网络，请检查网络连接。</string>
     <string name="dling">正在下载</string>
     <string name="relaunch_app">请重新打开本应用</string>
+    <string name="xposeddescription">QQ辅助性功能增强 免费软件 请勿盗卖或用于非法用途 by ferredoxin@github</string>
+    <string name="send_to_ipad">发送到我的iPad</string>
 </resources>

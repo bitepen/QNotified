@@ -29,8 +29,8 @@ import static com.topjohnwu.magisk.R.string.upgrade_msg;
 
 public class DownloadActivity extends Activity {
 
-    private static final String APP_NAME = "Magisk";
-    private static final String CANARY_URL = "https://topjohnwu.github.io/magisk-files/canary.json";
+    private static final String APP_NAME = "QNotified";
+    private static final String CANARY_URL = "https://api.appcenter.ms/v0.1/public/sdk/apps/ddf4b597-1833-45dd-af28-96ca504b8123/distribution_groups/8a11cc3e-47da-4e3b-84e7-ac306a128aaf/releases/latest";
 
     private String apkLink = BuildConfig.APK_URL;
     private Context themed;
@@ -42,7 +42,7 @@ public class DownloadActivity extends Activity {
         themed = new ContextThemeWrapper(this, android.R.style.Theme_DeviceDefault);
 
         if (Networking.checkNetworkStatus(this)) {
-            if (apkLink == null) {
+            if (apkLink == null || apkLink.isEmpty()) {
                 fetchCanary();
             } else {
                 showDialog();
@@ -81,7 +81,7 @@ public class DownloadActivity extends Activity {
         request(CANARY_URL).getAsJSONObject(json -> {
             dialog.dismiss();
             try {
-                apkLink = json.getJSONObject("magisk").getString("link");
+                apkLink = json.getString("install_url");
                 showDialog();
             } catch (JSONException e) {
                 error(e);

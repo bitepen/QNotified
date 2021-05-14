@@ -16,14 +16,14 @@ public class Mapping {
     public static final Map<String, String> inverseMap;
 
     static {
-        map.put("a.Q", "com.topjohnwu.magisk.core.App");
-        map.put("f.u7", "com.topjohnwu.magisk.core.SplashActivity");
-        map.put("fxQ.lk", "com.topjohnwu.magisk.core.Provider");
-        map.put("yy.E", "com.topjohnwu.magisk.core.Receiver");
-        map.put("xt.R", "com.topjohnwu.magisk.ui.MainActivity");
-        map.put("lt5.a", "com.topjohnwu.magisk.ui.surequest.SuRequestActivity");
-        map.put("d.s", "com.topjohnwu.magisk.core.download.DownloadService");
-        map.put("w.d", "androidx.work.impl.background.systemjob.SystemJobService");
+        map.put("a.Q", "");
+        map.put("f.u7", "nil.nadph.qnotified.activity.ConfigV2Activity");
+        //map.put("fxQ.lk", "com.topjohnwu.magisk.core.Provider");
+        //map.put("yy.E", "com.topjohnwu.magisk.core.Receiver");
+        map.put("xt.R", "nil.nadph.qnotified.activity.ConfigV2ActivityAlias");
+        map.put("lt5.a", "me.singleneuron.activity.QQPurifyAgentActivity");
+        map.put("d.s", "nil.nadph.qnotified.activity.ConfigActivity");
+        map.put("w.d", "me.ketal.ui.activity.QFileShareToIpadActivity");
 
         internalMap.put("a.Q", DelegateApplication.class);
         internalMap.put("f.u7", DownloadActivity.class);
