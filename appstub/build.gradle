@@ -1,0 +1,47 @@
+plugins {
+    id("com.android.application")
+}
+
+android {
+
+    compileSdkVersion 30
+    buildToolsVersion = "30.0.3"
+
+    def url = ""
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        applicationId = "nil.nadph.qnotified"
+        versionCode = 1
+        versionName = "1.0"
+        //buildConfigField("int", "STUB_VERSION", Config.stubVersion)
+        buildConfigField("String", "APK_URL", "\"$url\"")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = true
+            shrinkResources = false
+            proguardFiles("proguard-rules.pro")
+        }
+    }
+
+    aaptOptions {
+        additionalParameters("--package-id", "0x80")
+    }
+
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation(project(":app:shared"))
+    compileOnly "de.robv.android.xposed:api:82"
+}

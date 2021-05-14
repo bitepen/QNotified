@@ -1,4 +1,4 @@
-include ':app', ':stub', ':annotations', ':compiler', ':dex-ptm', ':mmkv', ':appstub'
+include ':app', ":app:shared", ':stub', ':annotations', ':compiler', ':dex-ptm', ':mmkv', ':appstub'
 File compilerLibsDir = new File(settingsDir, 'libs')
 project(':stub').projectDir = new File(compilerLibsDir, 'stub')
 project(':annotations').projectDir = new File(compilerLibsDir, 'annotations')
