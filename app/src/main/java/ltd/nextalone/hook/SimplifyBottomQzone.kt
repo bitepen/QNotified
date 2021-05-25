@@ -43,6 +43,6 @@ object SimplifyBottomQzone : CommonDelayableHook("na_simplify_bottom_bar_kt") {
             }
     }
 
-    override fun isValid() = requireMinQQVersion(QQVersion.QQ_8_5_5)
+    override fun isValid() = requireMinQQVersion(QQVersion.QQ_8_5_0)
 
 }
